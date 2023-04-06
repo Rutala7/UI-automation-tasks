@@ -13,8 +13,10 @@ public class AbstractTest {
     public static void oneTimeSetUp() {
         File file = new File("chromedriver.exe"); //Path to driver
         System.setProperty("webdriver.chromedriver.driver", file.getAbsolutePath()); //Driver name
+
         driver.manage().window().fullscreen();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+
         driver.get("https://automationexercise.com/");
     }
 
